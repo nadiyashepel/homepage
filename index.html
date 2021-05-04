@@ -15,7 +15,7 @@
     <title>Donald Trump — Résumé</title>
     <link rel="stylesheet" href="https://binary-studio-academy.github.io/stage-2/assets/stylesheets/base.css">
   </head>
-  <body>
+  <body onload="typeWriter()">
     <main>
 	  <article>
 	    <div class="page" style="border-color: maroon;">
@@ -30,7 +30,7 @@
 			      <div class="stackable grid">
 			        <div class="sixteen wide column">
 			        	<h1 class="name">Donald Trump</h1>
-						<div class="job">President of United states of America</div>
+						<div class="job">Former President of United states of America</div>
 						<ul class="contacts">
 						  <li>
 						    <a href="https://www.fb.com/DonaldTrump" rel="author" class="facebook">
@@ -62,7 +62,7 @@
 			          <div class="divider"></div>
 			        </div>
 			        <div class="sixteen wide column">
-			          <h2>Résumé</h2>
+			          <h2 id="slogan"></h2>
 			          <p>&mdash; I'm the most successful person ever to run for the presidency, by far. Nobody's ever been more successful than me. I'm the most successful person ever to run. Ross Perot isn't successful like me. Romney &mdash; I have a Gucci store that's worth more than Romney. Sorry losers and haters, but my IQ is one of the highest &mdash; and you all know it! Please don't feel so stupid or insecure, it's not your fault.</p>
 			        </div>
 			      </div>
@@ -76,6 +76,12 @@
 			  <div class="row">
 			    <div class="ten wide column">
 			    	<h3>Experience</h3>
+			    	<ul class="timeline">
+						<li>
+							<p><small>2020</small></p>
+							<p>Lost the 2020 United States presidential election</p>
+						</li>
+					</ul>
 					<ul class="timeline">
 						<li>
 							<p><small>2017</small></p>
@@ -325,5 +331,18 @@
 	    </div>
 	  </article>
 	</main>
+	<script>
+		var i = 0;
+		var txt = 'Make America Great Again';
+		var speed = 50;
+
+		function typeWriter() {
+		  if (i < txt.length) {
+		    document.getElementById("slogan").innerHTML += txt.charAt(i);
+		    i++;
+		    setTimeout(typeWriter, speed);
+		  }
+		}
+	</script>
   </body>
 </html>
