@@ -2,23 +2,35 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Résumé</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="My very own personal website.">
+    <meta name="google-site-verification" content="JSXHc5R4b0LTgmCgl1pO59m6T8NOPE4p3oEkQdx-cB8">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="googlebot" content="index,follow">
+    <meta name="robots" content="index,follow">
+    <meta name="subject" content="This is just a résumé.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="white">
+    <title>Donald Trump — Résumé</title>
     <link rel="stylesheet" href="https://binary-studio-academy.github.io/stage-2/assets/stylesheets/base.css">
   </head>
-  <body>
+  <body onload="typeWriter()">
     <main>
 	  <article>
-	    <div class="page" style="border-color: midnightblue;">
-	      <div class="stackable grid">
+	    <div class="page" style="border-color: maroon;">
+	      <div class="stackable grid">	
 			  <div class="row">
 			    <div class="three wide center aligned column">
-			      <!-- Avatar -->
+			    	<div class="avatar-wrapper">
+						<object class="avatar" data="./assets/images/avatar.png" role="img" aria-label="My profile picture"></object>
+					</div>
 			    </div>
 			    <div class="thirteen wide column">
 			      <div class="stackable grid">
 			        <div class="sixteen wide column">
 			        	<h1 class="name">Donald Trump</h1>
-						<div class="job">President of United states of America</div>
+						<div class="job">Former President of United states of America</div>
 						<ul class="contacts">
 						  <li>
 						    <a href="https://www.fb.com/DonaldTrump" rel="author" class="facebook">
@@ -50,8 +62,8 @@
 			          <div class="divider"></div>
 			        </div>
 			        <div class="sixteen wide column">
-			          <h2>Résumé</h2>
-			          <p>&mdash; I'm the most successful person ever to run for the presidency, by far. Nobody's ever been more successful than me. I'm the most successful person ever to run. Ross Perot isn't successful like me. Romney &mdash I have a Gucci store that's worth more than Romney. Sorry losers and haters, but my IQ is one of the highest &mdash and you all know it! Please don't feel so stupid or insecure, it's not your fault.</p>
+			          <h2 id="slogan"></h2>
+			          <p>&mdash; I'm the most successful person ever to run for the presidency, by far. Nobody's ever been more successful than me. I'm the most successful person ever to run. Ross Perot isn't successful like me. Romney &mdash; I have a Gucci store that's worth more than Romney. Sorry losers and haters, but my IQ is one of the highest &mdash; and you all know it! Please don't feel so stupid or insecure, it's not your fault.</p>
 			        </div>
 			      </div>
 			    </div>
@@ -64,6 +76,12 @@
 			  <div class="row">
 			    <div class="ten wide column">
 			    	<h3>Experience</h3>
+			    	<ul class="timeline">
+						<li>
+							<p><small>2020</small></p>
+							<p>Lost the 2020 United States presidential election</p>
+						</li>
+					</ul>
 					<ul class="timeline">
 						<li>
 							<p><small>2017</small></p>
@@ -313,5 +331,18 @@
 	    </div>
 	  </article>
 	</main>
+	<script>
+		var i = 0;
+		var txt = 'Make America Great Again';
+		var speed = 50;
+
+		function typeWriter() {
+		  if (i < txt.length) {
+		    document.getElementById("slogan").innerHTML += txt.charAt(i);
+		    i++;
+		    setTimeout(typeWriter, speed);
+		  }
+		}
+	</script>
   </body>
 </html>
